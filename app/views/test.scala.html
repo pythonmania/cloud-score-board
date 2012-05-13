@@ -1,0 +1,11 @@
+@(scoreForm: Form[Score])
+
+@import helper._
+
+@main("Welcome to US Score Board Test Form") {
+	@form(routes.Application.submitScore) {
+		@inputText(scoreForm("userid"))
+		@inputText(scoreForm("score"))
+	    <input type="submit" value="Create">
+	}
+}

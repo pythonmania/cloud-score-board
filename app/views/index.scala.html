@@ -1,0 +1,15 @@
+@(appname:String, scores: Seq[Score])
+
+@main("Welcome to US Score Board 0.0.1") {
+
+  <h1>@appname : @scores.size scores</h1>
+
+  <ul>
+    @scores.map { score => 
+      <li>
+        @score.userid : @score.score
+      </li>
+    }
+  </ul>
+  
+}
